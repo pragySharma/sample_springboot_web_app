@@ -45,7 +45,7 @@
                  <div class="form-group">
                         <label class="col-sm-4 control-label">Date of birth</label>
                         <div class="col-sm-8 float-right">
-                        <form:input  path= "dob" class="form-control" />                      
+                        <form:input  path= "dob" class="form-control" placeholder=" YYYY-MM-DD"/>                      
                          
                         </div>
                    </div>
@@ -53,7 +53,10 @@
                      <div class="form-group">
                         <label class="col-sm-4 control-label">Status</label>
                         <div class="col-sm-8 float-right">
-                        <form:input path="status" class="form-control"/>                         
+                        <form:select path="status" class="form-control">
+                        	<form:option value="Active">Active</form:option>
+                        	<form:option value="Inactive">Inactive</form:option>
+                        </form:select>                      
                    </div>
                    </div>      
                         

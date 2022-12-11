@@ -32,7 +32,7 @@
         }
 
       })
-	    $("#myModal").modal();
+	    $(".myModal").modal();
 	  });
 	 $("#saveBtn").click(function(){
         
@@ -105,7 +105,7 @@
 	</div>
 	
 	<!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade myModal" id="myModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
