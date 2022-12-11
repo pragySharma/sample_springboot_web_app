@@ -2,6 +2,8 @@ package com.app.sample.service;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +22,13 @@ public class EmployeeService {
 		public EmployeeDto addEmployee(EmployeeDto dto) {
 			System.out.println(dto);
 			EmployeeEntity employeeEntity = new EmployeeEntity();
-		//	int cage = LocalDate.now().getYear();
-			//employeeEntity.setAge();
-			employeeEntity.setDob(new Date(dto.getDob().getTime()));
+			
 			BeanUtils.copyProperties(dto, employeeEntity);
+			LocalDate date = dto.getDob().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+			String age = ""+Period.between(date,LocalDate.now()).getYears();
+			employeeEntity.setAge(Long.parseLong(age));
+			System.out.println(employeeEntity.getAge());
+			employeeEntity.setDob(new Date(dto.getDob().getTime()));
 			System.out.println(employeeEntity);
 			employeeEntity = repository.save(employeeEntity);
 			System.out.println(employeeEntity);

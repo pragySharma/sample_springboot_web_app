@@ -32,7 +32,7 @@
         }
 
       })
-	    $(".myModal").modal();
+	    $("#myModal").modal();
 	  });
 	 $("#saveBtn").click(function(){
         
@@ -105,7 +105,7 @@
 	</div>
 	
 	<!-- Modal -->
-  <div class="modal fade myModal" id="myModal" role="dialog">
+  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -122,7 +122,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Id</label>
                     <div class="col-sm-8 float-right">
-                    <input name="id" id="id" class="form-control"/>                       
+                    <input name="id" id="id" class="form-control" disabled="disabled"/>                       
                      
                     </div>
                 </div>
@@ -161,12 +161,16 @@
                      <div class="form-group">
                         <label class="col-sm-4 control-label">Status</label>
                         <div class="col-sm-8 float-right">
-                        <input name="status" id="status" class="form-control"/>                         
-                   </div>
+                        <select name="status" class="form-control" id="status">
+                        		<option value="Active">Active</option>
+                        		<option value="Active">Inactive</option>
+                        		
+                        </select>
+                  </div>
                    </div>      
                         
                        
-                   </div>
+                   
                 <div class="card-footer mt-4">
                     <button class="btn btn-primary offset-6" type="button" id="saveBtn">Submit</button>
                 </div>
