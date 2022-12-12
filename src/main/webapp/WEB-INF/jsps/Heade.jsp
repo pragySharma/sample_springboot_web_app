@@ -14,14 +14,9 @@
 	        <a class="nav-link" href="employee">Home <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="callregemployee" id="add">Add Emplyee</a>
+	        <a class="nav-link" href="callregemployee" id="add">Add Employee</a>
 	      </li>  
-	      <li class="nav-item">
-	        <a class="nav-link" href="#" id="search">Delete</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#"  id="Category">Edit</a>
-	      </li>
+	      
 	      
 	    </ul>	    
 	  </div>

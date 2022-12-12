@@ -14,7 +14,7 @@
   <script>
 	$(document).ready(function(){
 	  $(".myBtn").click(function(){
-		  var i = $(".myBtn").val();
+		  var i = $(this).val();
 		  console.log(i)
 		  
       $.ajax({
@@ -95,7 +95,7 @@
 			<td>${e.dob}</td>
 			<td>${e.salary}</td>
 			<td>${e.status}</td>
-			<td><button type="button" class="btn btn-default btn-lg myBtn"  value="${e.id} ">Edit</button></td>
+			<td><button type="button" class="btn btn-default text-primary myBtn"  value="${e.id} ">Edit</button></td>
 			<td><a href="deleteEmployee?id=${e.id}">Delete</a></td>
 			</tr>
 			</c:forEach>
@@ -174,9 +174,10 @@
                 <div class="card-footer mt-4">
                     <button class="btn btn-primary offset-6" type="button" id="saveBtn">Submit</button>
                 </div>
+             </div>
               </form>
         
-    </div>
+         </div>
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
